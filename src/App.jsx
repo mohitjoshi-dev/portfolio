@@ -1,5 +1,5 @@
-import Introduction from "./Components/Introduction";
-import Skills from "./Components/Skills";
+import Introduction from "./components/Introduction";
+import Skills from "./components/Skills";
 
 function App() {
   return (
