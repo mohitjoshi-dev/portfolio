@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+.hero-title {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hero-title::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255,255,255,0.05) 45%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0.05) 55%,
+    transparent 65%
+  );
+
+  transform: translateX(-180%) skewX(-20deg);
+
+  animation: shimmer 8s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+
+  0% {
+    transform: translateX(-180%) skewX(-20deg);
+  }
+
+  15% {
+    transform: translateX(180%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(180%) skewX(-20deg);
+  }
+
+}
