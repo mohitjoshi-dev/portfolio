@@ -1,6 +1,7 @@
 import Introduction from "./components/Introduction";
 import Skills from "./components/Skills";
 import CursorRipple from "./components/CursorRipple";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <CursorRipple/>
       <Introduction />
       <Skills />
+      <Projects/>
     </>
   );
 }

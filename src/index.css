@@ -1,8 +1,32 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero-title,
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.code-font {
+  font-family: "JetBrains Mono", monospace;
+}
 
 html {
   scroll-behavior: smooth;
 }
+
+html,
+body {
+  background-color: #090913;
+}
+
+#root {
+  background-color: #090913;
+}
+
 
 .hero-title {
   position: relative;
@@ -64,5 +88,6 @@ html {
 }
 
 .animate-gradient {
-  animation: gradientMove 6s ease infinite;
+  animation: gradientMove 5s ease infinite;
 }
+

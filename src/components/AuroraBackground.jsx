@@ -70,7 +70,7 @@ function AuroraBackground() {
         />
 
     <div
-    className=" absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.12),transparent_70%)]"/>
+        className=" absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.12),transparent_70%)]"/>
 
 
 

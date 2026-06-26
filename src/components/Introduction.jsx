@@ -62,12 +62,13 @@ function Introduction() {
     
     <div className="relative inline-block overflow-hidden">
       <motion.h1 
+      style={{backgroundSize: "200% 200%",}}
       initial={{opacity:0, y:30}}
       animate={{opacity:1, y:0}}
       transition={{duration:0.8}}
       
-      className="hero-title text-7xl font-extrabold tracking-tight mb-3 bg-linear-to-r from white via bg-purple-300 to to-fuchsia-400
-                 bg-size-[200%_200] bg-clip-text text-transparent animate-gradient">
+      className="hero-title text-7xl font-extrabold tracking-tight mb-3 bg-linear-to-r from white via-purple-300 to to-fuchsia-400
+                 bg-clip-text text-transparent animate-gradient">
       
            Mohit Joshi
       </motion.h1>
@@ -90,27 +91,43 @@ function Introduction() {
     repeat={Infinity}
   />
   </h2>
-
-    <p className="mt-3 text-lg text-gray-300 max-w-2xl leading-relaxed">
-      Crafting fast, responsive web experiences with
-      React, Tailwind CSS & JavaScript.
-    </p>
-
     </div>
 
-    <p className="text-xl text-gray-400 text-center max-w-2x1 mb-8">
-        Building modern web applications with React, Tailwind CSS and
-        JavaScript while preparing for software internships.
-    </p>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.7 }}
+      
+      className="mb-9 max-w-3xl mx-auto text-center text-lg md:text-xl leading-9 text-gray-300 font-normal"
+    >
+      Crafting sleek, responsive web experiences with{" "}
+      <span className="font-semibold text-white">
+        React
+      </span>{" "}
+      and{" "}
+      <span className="font-semibold text-purple-300">
+        Tailwind CSS
+      </span>.
+      <br />
+      Passionate about building modern interfaces and continuously learning to become a better software engineer.
+  </motion.p>
 
   <div className="flex gap-6">
-  <button className="bg-linear-to-r from-purple-600 to-fuchsia-500 px-8 py-4 font-semibold rounded-lg cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-purple-500/40 hover:shadow-2xl transition-all duration-300">
-    View Projects
+  <button
+  onClick={() => scrollToSection("projects")}
+  className="px-8 py-4 rounded-xl bg-linear-to-r from-purple-600 to-fuchsia-500 font-semibold text-white hover:scale-105 
+  hover:shadow-[0_0_30px_rgba(168,85,247,.45)] transition-all duration-300">
+     View Projects
   </button>
 
-  <button className="border border-purple-500 px-8 py-4 font-semibold rounded-lg cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-purple-500/20 hover:shadow-2xl transition-all duration-300">
-    Download Resume
-  </button>
+  <a
+  href="/resume.pdf"
+  download
+  className="px-8 py-4 rounded-xl border border-purple-500 text-white font-semibold hover:bg-purple-500/10 hover:scale-105 
+             hover:shadow-[0_0_25px_rgba(168,85,247,.35)] transition-all duration-300">
+      Download Resume
+  </a>
+
 </div>
 <div className="flex items-center gap-6 mt-10">
   {socials.map((social, index) => {
