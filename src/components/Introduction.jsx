@@ -34,7 +34,7 @@ function Introduction() {
 
     <section 
       id="home"
-      className="relative overflow-hidden min-h-screen bg-[#090913] flex flex-col justify-center items-center text-white">
+      className="relative overflow-hidden min-h-screen bg-[#090913] pt-32 flex flex-col justify-center items-center text-white">
       <AuroraBackground />       
 
     <div className=" absolute -top-30 -left-30 w-112.5 h-112.5 rounded-full bg-purple-700/20 blur-[140px] pointer-events-none"></div>
@@ -47,13 +47,14 @@ function Introduction() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: "easeOut",}}>
-    </motion.div>        
 
 
-    <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm font-medium text-blue-400 backdrop-blur-sm mb-6">
+    <div className="mt-16 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm font-medium text-blue-400 backdrop-blur-sm mb-6">
       <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
       Available for Internships
     </div>
+
+    </motion.div>        
 
     
     <p className="text-purple-400 text-3xl font-medium mb-4 ">
