@@ -1,3 +1,23 @@
+import ProjectCard from "./ProjectCard";
+
+// Temporary placeholder image
+import portfolioImg from "../assets/portfolio.png";
+
+const projects = [
+  {
+    id: 1,
+    title: "Personal Portfolio",
+    description:
+      "A modern developer portfolio built with React, Tailwind CSS and Framer Motion.",
+    image: portfolioImg,
+    tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    github: "#",
+    demo: "#",
+    featured: true,
+  },
+];
+
+
 function Projects() {
   return (
     <section
@@ -17,6 +37,24 @@ function Projects() {
       <div className="w-32 h-1 mx-auto rounded-full bg-linear-to-r from-purple-500 to-fuchsia-500"></div> 
 
       </div>
+
+      <div className="grid md:grid-cols-2 gap-8 mt-20">
+
+  {projects.map((project) => (
+
+    <ProjectCard
+      key={project.id}
+      title={project.title}
+      description={project.description}
+      tech={project.tech}
+      image={project.image}
+      github={project.github}
+      demo={project.demo}
+      featured={project.featured}/>
+    ))}
+
+</div>
+
     </section>
   );
 }

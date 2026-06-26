@@ -34,7 +34,7 @@ function Introduction() {
 
     <section 
       id="home"
-      className="relative overflow-hidden min-h-screen bg-[#090913] flex flex-col items-center text-white pt-11.5">
+      className="relative overflow-hidden min-h-screen bg-[#090913] flex flex-col items-center text-white pt-12">
       <AuroraBackground />       
 
     <div className=" absolute -top-30 -left-30 w-112.5 h-112.5 rounded-full bg-purple-700/20 blur-[140px] pointer-events-none"></div>
