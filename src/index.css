@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-title {
   position: relative;
   display: inline-block;
@@ -42,4 +46,23 @@
     transform: translateX(180%) skewX(-20deg);
   }
 
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: left center;
+  }
+
+  50% {
+    background-position: right center;
+  }
+
+  100% {
+    background-position: left center;
+  }
+}
+
+.animate-gradient {
+  animation: gradientMove 6s ease infinite;
 }

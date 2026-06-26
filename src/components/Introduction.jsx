@@ -1,5 +1,10 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope,  } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import { FaHouse } from "react-icons/fa6";
+import { HiHome } from "react-icons/hi";
+import AuroraBackground from "./AuroraBackground";
+import { motion } from "framer-motion";
+
 
 function Introduction() {
   const socials = [
@@ -17,33 +22,55 @@ function Introduction() {
   },
 ];
 
+    const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
 
-    <section className="relative overflow-hidden min-h-screen bg-[#090913] flex flex-col justify-center items-center text-white"> 
-    
+    <section 
+      id="home"
+      className="relative overflow-hidden min-h-screen bg-[#090913] flex flex-col justify-center items-center text-white">
+      <AuroraBackground />       
+
     <div className=" absolute -top-30 -left-30 w-112.5 h-112.5 rounded-full bg-purple-700/20 blur-[140px] pointer-events-none"></div>
     <div className=" absolute -bottom-30 -right-30 w-112.5 h-112.5 rounded-full bg-purple-700/20 blur-[140px] pointer-events-none"></div>
     
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-125 rounded-full bg-fuchsia-500/8 blur-[200px] pointer-events-none"></div>
 
-    <div className="relative z-10"></div>
-    
+    <motion.div
+      className="relative z-10"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut",}}>
+    </motion.div>        
+
+
     <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm font-medium text-blue-400 backdrop-blur-sm mb-6">
       <span className="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
       Available for Internships
     </div>
 
-
-    <p className="text-purple-400 text-3xl font-medium mb-4">
+    
+    <p className="text-purple-400 text-3xl font-medium mb-4 ">
   👋 Hello, I'm
     </p>
-
-
+    
     <div className="relative inline-block overflow-hidden">
-      <h1 className="hero-title text-7xl font-extrabold tracking-tight mb-3">
+      <motion.h1 
+      initial={{opacity:0, y:30}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:0.8}}
+      
+      className="hero-title text-7xl font-extrabold tracking-tight mb-3 bg-linear-to-r from white via bg-purple-300 to to-fuchsia-400
+                 bg-size-[200%_200] bg-clip-text text-transparent animate-gradient">
+      
            Mohit Joshi
-      </h1>
+      </motion.h1>
     </div>
     <div className="mb-8 text-center">
 
@@ -104,28 +131,93 @@ function Introduction() {
   })}
 </div>
 
-    <nav className="fixed top-1 left-1/2 -translate-x-1/2 z-50 max-w-3x1 flex items-center justify-between px-8 py-2 rounded-full
-                 bg-gray-800/70  backdrop-blur-xl border  border-purple-500/20  shadow-2xl" >
+
+<nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 max-w-3xl flex items-center justify-between px-8 py-4 rounded-full
+              bg-[#101827]/75 backdrop-blur-2xl border border-purple-500/20 shadow-[0_10px_40px_rgba(139,92,246,0.15)]">
 
       
+      <div className="flex items-center gap-3">
+       
 
-      <div className="flex gap-5">
-      <a href="#about" className=" px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-0.5 transition-all duration-500">
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToSection("home");
+    }}
+        
+    className="group relative flex items-center justify-center w-12 h-12 rounded-full border border-purple-500/30 bg-linear-to-br from-[#2b2346] via-[#1c2235] to-[#111827]
+              hover:border-fuchsia-400 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(217,70,239,.45)] transition-all duration-300"
+>
+   <HiHome
+        size={22}
+        className="text-white group-hover:text-fuchsia-300 transition-all duration-300 drop-shadow-[0_0_8px_rgba(255,255,255,.35)]
+                     group-hover:drop-shadow-[0_0_16px_rgba(217,70,239,.8)]"
+        />
+
+    <span className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-linear-to-br
+                   from-purple-500/20 via-pink-500/10 to-transparent transition duration-300" />   
+        
+    <span className="absolute -bottom-4 w-2 h-2 rounded-full bg-fuchsia-400 shadow-[0_0_12px_#d946ef] opacity-0 scale-0 group-hover:scale-100 
+                     group-hover:opacity-100 transition-all duration-300" /></a>
+       
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToSection("about");
+    }}    
+      
+      className=" group relative px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-1 transition-all duration-500">
         About
+      <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-0 bg-linear-to-br from-purple-400 to-pink-500 group-hover:w-3/4 
+                       transition-all duration-300" />
       </a>        
-      <a href="#skills" className="px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-0.5 transition-all duration-500">
+     
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("skills");
+        }}
+             
+      className="group relative px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-1 transition-all duration-500">
         Skills
+      <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-0 bg-linear-to-br from-purple-400 to-pink-500 group-hover:w-3/4 
+                       transition-all duration-300" />
       </a>  
-      <a href="#projects" className="px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-0.5 transition-all duration-500">
+     
+     
+      <a 
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("projects");
+        }}
+        
+      className="group relative px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-1 transition-all duration-500">
         Projects
+      <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-0 bg-linear-to-br from-purple-400 to-pink-500 group-hover:w-3/4 
+                       transition-all duration-300" />  
       </a>        
-      <a href="#contact" className="px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-0.5 transition-all duration-500">
+      
+      
+      <a  
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("contact");
+        }}
+      
+      className="group relative px-4 py-2 rounded-full hover:bg-purple-500/10 hover:text-purple-400 hover:-translate-y-1 transition-all duration-500">
         Contact
+      <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-0 bg-linear-to-br from-purple-400 to-pink-500 group-hover:w-3/4 
+                       transition-all duration-300" />  
       </a>               
     </div>
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
       className="px-3 py-4 rounded-full bg-linear-to-r from-purple-60 to-fuchsia-500 font-medium text-white hover:scale-105
-      hover:shadow-1g hover:shadow-violet-500/30 transition-all duration-300 ease-out ml-4"> Resume ↗ </a>
+      hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(217,70,239,.55)] transition-all duration-300 ease-out ml-4"> Resume ↗ </a>
 
   </nav>
 </section>
@@ -149,6 +241,19 @@ function Introduction() {
   </section>
 
 </>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   );
