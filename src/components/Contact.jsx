@@ -3,7 +3,9 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function Contact() {
   return (
-    <section className="relative bg-black py-24 px-6 overflow-hidden">
+    <section 
+      id="contact"
+      className="relative bg-black py-24 px-6 overflow-hidden">
       {/* Background glow — matches hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
 

@@ -241,24 +241,6 @@ function Introduction() {
   </nav>
 </section>
 
-
-  <section
-      id="about"
-      className="min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center"
-    >
-      <h2 className="text-5xl font-extrabold tracking-tight mb-6 ">
-        About Me
-      </h2>
-
-      <p className="text-lg text-gray-500 max-w-3xl text-center">
-        I am a B.Tech student who is currently in 3rd year pursuing Computer Science and I am passionate about frontend development,
-        React, Tailwind CSS and building projects that solve real-world
-        problems.
-        I till now have not made that much of a Project but will make sure to make them sooner
-        
-      </p>
-  </section>
-
 </>
 
   );
