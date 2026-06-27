@@ -232,6 +232,7 @@ function Introduction() {
       <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-0.5 w-0 bg-linear-to-br from-purple-400 to-pink-500 group-hover:w-3/4 
                        transition-all duration-300" />  
       </a>               
+    
     </div>
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
       className="px-3 py-4 rounded-full bg-linear-to-r from-purple-60 to-fuchsia-500 font-medium text-white hover:scale-105
@@ -259,20 +260,6 @@ function Introduction() {
   </section>
 
 </>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   );
 }

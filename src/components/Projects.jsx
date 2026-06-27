@@ -11,7 +11,7 @@ const projects = [
       "A responsive developer portfolio featuring smooth animations, reusable React components, and modern UI design built with Tailwind CSS and Framer Motion.",
     image: portfolioImg,
     tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    github: "#",
+    github: "https://github.com/mohitjoshi-dev/portfolio",
     demo: "#",
     featured: true,
   },
