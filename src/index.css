@@ -91,3 +91,166 @@ body {
   animation: gradientMove 5s ease infinite;
 }
 
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: .6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .6;
+  }
+}
+
+.float-slow{
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.glow-pulse{
+  animation: pulseGlow 3s infinite;
+}
+
+
+/* ---------- Avatar Orbit ---------- */
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  position: absolute;
+  inset: -45px;
+  animation: orbit 18s linear infinite;
+}
+
+.orbit.reverse {
+  animation-direction: reverse;
+  animation-duration: 26s;
+}
+
+
+.skill-chip{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    min-width: max-content;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(168,85,247,.22);
+
+    backdrop-filter: blur(14px);
+
+    color:white;
+
+    transition:all .35s ease;
+
+    cursor:pointer;
+
+    overflow:hidden;
+}
+
+.skill-chip:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.04);
+
+    border-color:#d8b4fe;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.04)
+    );
+
+    box-shadow:
+        0 0 18px rgba(168,85,247,.25),
+        0 0 40px rgba(168,85,247,.15);
+
+}
+
+.skill-chip::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:14px;
+
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(168,85,247,.7),
+        transparent,
+        rgba(236,72,153,.5)
+    );
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.35s;
+}
+
+.skill-chip:hover::before{
+
+    opacity:1;
+
+}
+
+.scrollbar-hide::-webkit-scrollbar{
+    display:none;
+}
+
+.scrollbar-hide{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}

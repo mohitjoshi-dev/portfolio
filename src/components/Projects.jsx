@@ -56,7 +56,7 @@ const projects = [
 
 function Projects() {
          
-          const scrollRef = useRef(null);
+        const scrollRef = useRef(null);
 
         const scrollLeft = () => {
           scrollRef.current?.scrollBy({
